@@ -1,0 +1,51 @@
+<div class="container">
+
+<div class="foobar" *ngFor = "let element of elements; let i = index ">
+  <div class="foo" [ngClass]="{'red' : selectedValue==element.type, 'grey': selectedValue!=element.type}" *ngIf="i%15 == 0" style = "position:relative; top:4.5px">{{i/15}}
+  </div>
+  <div class="foo" [ngClass]="{'red' : selectedValue==element.type, 'grey': selectedValue!=element.type}" *ngIf="i%15 != 0">
+  </div>
+</div>
+</div>
+
+<div class="extra-container">
+	<div>Click on the button with the letter whose elements you want highlighted</div>
+	<div>
+		<button #buttonA (click)="checkOne(buttonA.name)" name ="typeA">A</button>
+	</div>
+	<div>
+		<button #buttonB (click)="checkOne(buttonB.name)" name ="typeB">B</button>
+	</div>
+	<div>
+		<button #buttonC (click)="checkOne(buttonC.name)" name ="typeC">C</button>
+	</div>
+	<div>
+		<button #buttonD (click)="checkOne(buttonD.name)" name ="typeD">D</button>
+	</div>
+	<div>
+		<button #buttonE (click)="checkOne(buttonE.name)" name ="typeE">E</button>
+	</div>
+	<div>
+		<button #buttonF (click)="checkOne(buttonF.name)" name ="typeF"id="3">F</button>
+	</div>
+	<div>
+		<button #buttonG (click)="checkOne(buttonG.name)" name ="typeG">G</button>
+	</div>
+	<div>
+		<button #buttonH (click)="checkOne(buttonH.name)" name ="typeH">H</button>
+	</div>
+	<div>
+		<button #buttonI (click)="checkOne(buttonI.name)" name ="typeI">I</button>
+	</div>
+	<div>
+		<button #buttonJ (click)="checkOne(buttonJ.name)" name ="typeJ">J</button>
+	</div>
+	<div>
+		<button #buttonK (click)="checkOne(buttonK.name)" name ="typeK">K</button>
+	</div>
+	<div>
+		<button #buttonL (click)="checkOne(buttonL.name)" name ="typeL">L</button>
+	</div>
+</div>
+
+

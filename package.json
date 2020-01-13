@@ -4,8 +4,30 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha tests/*",
+    "start": "npm run build & concurrently --kill-others \"npm run serve-api\" \"npm run serve\"",
+    "serve": "cd static/ui-app && ng serve --proxy-config proxy.conf.json && cd ..",
+    "build": "cd static/ui-app && ng build && cd ..",
+    "serve-api": "node index.js",
+    "lint": "cd static/ui-app && ng lint && cd ..",
+    "e2e": "cd static/ui-app && ng e2e && cd .."
   },
-  "author": "bhargav",
-  "license": "ISC"
+  "author": "Louis Hamilton",
+  "license": "ISC",
+  "dependencies": {
+    "@angular/cli": "^8.3.22",
+    "body-parser": "*",
+    "cookie-parser": "*",
+    "express": "*",
+    "nodemon": "*",
+    "yarn": "*"
+  },
+  "devDependencies": {
+    "webpack": "*",
+    "webpack-cli": "*",
+    "chai": "*",
+    "chai-http": "*",
+    "mocha": "*",
+    "concurrently": "*"
+  }
 }
