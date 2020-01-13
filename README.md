@@ -21,8 +21,8 @@
 2) Output images do not necessarily represent even distribution
 
 ## Instructions To Test The App
-cd codingChallenge
-npm install
-npm start (run node and angular)
-npm test (for testing)
-
+```sh
+$ cd codingChallenge/
+$ npm install
+$ npm test
+$ npm start
